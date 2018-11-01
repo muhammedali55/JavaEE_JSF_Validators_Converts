@@ -9,7 +9,7 @@ public class index2Bean {
 
 	private String kullaniciAdi;
 	
-	private Double sayi;
+	private double sayi;
 	
 	private String  zorunluSekilChar;
 
@@ -21,11 +21,11 @@ public class index2Bean {
 		this.kullaniciAdi = kullaniciAdi;
 	}
 
-	public Double getSayi() {
+	public double getSayi() {
 		return sayi;
 	}
 
-	public void setSayi(Double sayi) {
+	public void setSayi(double sayi) {
 		this.sayi = sayi;
 	}
 

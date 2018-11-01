@@ -29,12 +29,12 @@
          
 
 <h1>KEYFE KEDER (custom) KISITLAMASI </h1>
- <h:inputSecret id = "sayi" value = "#{index2bean.zorunluSekilChar}" 
-            label = "Sayi" >
-                       <f:validateRegex pattern = "((? = .*[a-z]).{5,})" />
-           </h:inputText>			
+ <h:inputSecret id = "chr" value = "#{index2bean.zorunluSekilChar}" 
+            label = "password" >
+                       <f:validateRegex pattern = "((? = .*[a-z]).{6,})" />
+           </h:inputSecret>			
          <h:commandButton value = "submit" action = "result"/>
-         <h:message for = "sayi" style = "color:red" />
+         <h:message for = "chr" style = "color:red" />
          
              
 </h:form>
