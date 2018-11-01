@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+</h:head>
+<h:body>
+<h:form>
+<h1>UZUNLUK KISITLAMASI </h1>
+ <h:inputText id = "isim" value = "#{index2bean.kullaniciAdi}" 
+            label = "İsim" >
+            <f:validateLength minimum = "6" maximum = "12" />
+         </h:inputText>			
+         <h:commandButton value = "submit" action = "result"/>
+         <h:message for = "isim" style = "color:red" />
+         
+
+<h1>DOUBLE KISITLAMASI </h1>
+ <h:inputText id = "sayi" value = "#{index2bean.sayi}" 
+            label = "Sayi" >
+                     <f:validateDoubleRange minimum = "750.45" maximum = "15269.99" />
+           </h:inputText>			
+         <h:commandButton value = "submit" action = "result"/>
+         <h:message for = "sayi" style = "color:red" />
+         
+
+<h1>KEYFE KEDER (custom) KISITLAMASI </h1>
+ <h:inputSecret id = "sayi" value = "#{index2bean.zorunluSekilChar}" 
+            label = "Sayi" >
+                       <f:validateRegex pattern = "((? = .*[a-z]).{5,})" />
+           </h:inputText>			
+         <h:commandButton value = "submit" action = "result"/>
+         <h:message for = "sayi" style = "color:red" />
+         
+             
+</h:form>
+</h:body>
+</html>
